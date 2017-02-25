@@ -31,11 +31,8 @@ public class Server
 
           System.out.println("RECEIVED REQUEST");
 
-          double x = in.readDouble();
-          double y = in.readDouble();
-
-          System.out.println("Read values " + x + "  " + y);
-          out.writeDouble(x*y);
+          //stuff for tic tac toe
+          
     		}   // end try
 
         catch (IOException e) {

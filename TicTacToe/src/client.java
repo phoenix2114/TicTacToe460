@@ -25,10 +25,8 @@ public class client
           //AT THIS POINT CONNECTION MADE
 
           System.out.println("RECEIVED REQUEST");
-          out.writeDouble(55.1);
-          out.writeDouble(44.7);
-
-          Double answer = in.readDouble();
+        //stuff for tic tac toe
+          
 	  }
         catch (IOException e) {
         	System.out.println(e.toString());
