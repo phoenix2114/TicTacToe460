@@ -1,0 +1,44 @@
+//Always plays X
+
+import java.net.*;
+import java.io.*;
+
+
+public class Server
+{
+
+
+    public static void main( String[] args)
+    {
+        ServerSocket server; // this is the "door"
+
+        Socket toclientsocket;
+
+
+        try {    // NOTE - must be within a try-clause or throw exceptions!!!!
+
+            server = new ServerSocket(7788);   //listen at the door
+            System.out.println("waiting for connection");
+
+            DataInputStream in = new DataInputStream(toclentsocket.getInputStream());
+            DataOutputStream in = new DataOutputStream(toclentsocket.getOutputStream());
+
+            toclientsocket = server.accept();   // block UNTIL request received
+
+            //AT THIS POINT CONNECTION MADE
+
+            System.out.println("RECEIVED REQUEST");
+
+            double x = in.readDouble();
+            double y = in.readDouble();
+
+            System.out.println("Read values " + x + "  " + y);
+            out.writeDouble(x*y);
+
+
+        }   // end try
+        catch (IOException e) {
+            System.out.println("It didnt happen");
+        }
+    }  // end main
+}  // end myserver class
